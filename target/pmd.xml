@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.55.0" timestamp="2026-04-27T15:20:59.813">
+<file name="C:\Users\keato\OneDrive\Documents\softwaresystems\RescueNet\src\main\java\com\rescuenet\core\assignment\SkillMapper.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="25" rule="UnnecessaryImport" ruleset="Code Style" package="com.rescuenet.core.assignment" class="SkillMapper" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.HashSet'
+</violation>
+</file>
+<file name="C:\Users\keato\OneDrive\Documents\softwaresystems\RescueNet\src\main\java\com\rescuenet\ui\Main.java">
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="29" rule="UnnecessaryImport" ruleset="Code Style" package="com.rescuenet.ui" class="Main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.Collections'
+</violation>
+</file>
+</pmd>

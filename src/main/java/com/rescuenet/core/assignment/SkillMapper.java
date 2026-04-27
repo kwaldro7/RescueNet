@@ -4,7 +4,6 @@ import com.rescuenet.core.event.IncidentCategory;
 import com.rescuenet.core.team.TeamSkill;
 
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.Set;
 
 /** Maps an IncidentCategory to the set of TeamSkills required to respond. */

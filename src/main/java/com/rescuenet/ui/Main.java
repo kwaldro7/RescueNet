@@ -7,7 +7,6 @@ import com.rescuenet.core.team.TeamSkill;
 import com.rescuenet.core.team.TeamState;
 import com.rescuenet.infrastructure.RescueNetSystem;
 
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 

@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=windows-1252">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>SensorEvent.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>package com.rescuenet.core.event;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * An event produced by an environmental sensor.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Supports: smoke (ppm), temperature (C), CO2 (ppm), motion.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Reliability degrades when battery is critically low.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class SensorEvent extends RawEvent {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public enum SensorType { SMOKE, TEMPERATURE, CO2, MOTION }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public enum SensorStatus { OK, ALERT }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /** Battery threshold below which the event is unreliable (Scenario G). */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public static final double LOW_BATTERY_THRESHOLD = 5.0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private static final double SMOKE_HIGH_PPM    = 700.0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private static final double SMOKE_MEDIUM_PPM  = 300.0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private static final double TEMP_HIGH_CELSIUS = 60.0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private static final double TEMP_MED_CELSIUS  = 40.0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private static final double CO2_HIGH_PPM      = 2000.0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private static final double CO2_MED_PPM       = 1000.0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final String sensorId;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final SensorType sensorType;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final double measuredValue;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final SensorStatus status;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final double batteryLevel;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public SensorEvent(String sensorId, Location location, long timestampMinutes,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                       SensorType sensorType, double measuredValue,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                       SensorStatus status, double batteryLevel) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        super(location, timestampMinutes, deriveCategory(sensorType));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.sensorId = sensorId;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.sensorType = sensorType;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.measuredValue = measuredValue;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.status = status;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.batteryLevel = batteryLevel;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private static IncidentCategory deriveCategory(SensorType type) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        switch (type) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            case SMOKE:</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            case TEMPERATURE:</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_44'/>
+44
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_44'>1</a>
+<span>
+
+1. deriveCategory : replaced return value with null for com/rescuenet/core/event/SensorEvent::deriveCategory &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                return IncidentCategory.FIRE;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            case CO2:</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_46'/>
+46
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_46'>1</a>
+<span>
+
+1. deriveCategory : replaced return value with null for com/rescuenet/core/event/SensorEvent::deriveCategory &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>                return IncidentCategory.ENVIRONMENTAL_HAZARD;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            case MOTION:</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_48'/>
+48
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_48'>1</a>
+<span>
+
+1. deriveCategory : replaced return value with null for com/rescuenet/core/event/SensorEvent::deriveCategory &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                return IncidentCategory.INTRUSION;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            default:</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_50'/>
+50
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_50'>1</a>
+<span>
+
+1. deriveCategory : replaced return value with null for com/rescuenet/core/event/SensorEvent::deriveCategory &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>                return IncidentCategory.UNKNOWN;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_54'/>
+54
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_54'>1</a>
+<span>
+
+1. getSensorId : replaced return value with &#34;&#34; for com/rescuenet/core/event/SensorEvent::getSensorId &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>    public String getSensorId() { return sensorId; }</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_55'/>
+55
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_55'>1</a>
+<span>
+
+1. getSensorType : replaced return value with null for com/rescuenet/core/event/SensorEvent::getSensorType &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>    public SensorType getSensorType() { return sensorType; }</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_56'/>
+56
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_56'>1</a>
+<span>
+
+1. getMeasuredValue : replaced double return with 0.0d for com/rescuenet/core/event/SensorEvent::getMeasuredValue &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>    public double getMeasuredValue() { return measuredValue; }</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_57'/>
+57
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_57'>1</a>
+<span>
+
+1. getStatus : replaced return value with null for com/rescuenet/core/event/SensorEvent::getStatus &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>    public SensorStatus getStatus() { return status; }</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_58'/>
+58
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_58'>1</a>
+<span>
+
+1. getBatteryLevel : replaced double return with 0.0d for com/rescuenet/core/event/SensorEvent::getBatteryLevel &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>    public double getBatteryLevel() { return batteryLevel; }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean hasCriticallyLowBattery() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_61'/>
+61
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_61'>4</a>
+<span>
+
+1. hasCriticallyLowBattery : negated conditional &rarr; KILLED<br/>
+
+2. hasCriticallyLowBattery : replaced boolean return with true for com/rescuenet/core/event/SensorEvent::hasCriticallyLowBattery &rarr; KILLED<br/>
+
+3. hasCriticallyLowBattery : replaced boolean return with false for com/rescuenet/core/event/SensorEvent::hasCriticallyLowBattery &rarr; KILLED<br/>
+
+4. hasCriticallyLowBattery : changed conditional boundary &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return batteryLevel &#60; LOW_BATTERY_THRESHOLD;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_65'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getRawScore() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_66'/>
+66
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_66'>1</a>
+<span>
+
+1. getRawScore : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (status == SensorStatus.OK) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            return 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_68'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_69'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        switch (sensorType) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_70'/>
+70
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_70'>1</a>
+<span>
+
+1. getRawScore : replaced int return with 0 for com/rescuenet/core/event/SensorEvent::getRawScore &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            case SMOKE:       return scoreBanded(measuredValue, SMOKE_MEDIUM_PPM, SMOKE_HIGH_PPM);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_71'/>
+71
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_71'>1</a>
+<span>
+
+1. getRawScore : replaced int return with 0 for com/rescuenet/core/event/SensorEvent::getRawScore &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>            case TEMPERATURE: return scoreBanded(measuredValue, TEMP_MED_CELSIUS, TEMP_HIGH_CELSIUS);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_72'/>
+72
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_72'>1</a>
+<span>
+
+1. getRawScore : replaced int return with 0 for com/rescuenet/core/event/SensorEvent::getRawScore &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>            case CO2:         return scoreBanded(measuredValue, CO2_MED_PPM, CO2_HIGH_PPM);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_73'/>
+73
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_73'>1</a>
+<span>
+
+1. getRawScore : replaced int return with 0 for com/rescuenet/core/event/SensorEvent::getRawScore &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            case MOTION:      return 20;</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>            default:          return 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_75'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_76'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_78'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /** Returns 20 for medium threshold, 30 for high threshold. */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_79'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private int scoreBanded(double value, double medThreshold, double highThreshold) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_80'/>
+80
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_80'>3</a>
+<span>
+
+1. scoreBanded : replaced int return with 0 for com/rescuenet/core/event/SensorEvent::scoreBanded &rarr; SURVIVED<br/>
+
+2. scoreBanded : changed conditional boundary &rarr; SURVIVED<br/>
+
+3. scoreBanded : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (value &#62;= highThreshold) return 30;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_81'/>
+81
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_81'>3</a>
+<span>
+
+1. scoreBanded : changed conditional boundary &rarr; SURVIVED<br/>
+
+2. scoreBanded : negated conditional &rarr; KILLED<br/>
+
+3. scoreBanded : replaced int return with 0 for com/rescuenet/core/event/SensorEvent::scoreBanded &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (value &#62;= medThreshold)  return 20;</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_82'/>
+82
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_82'>1</a>
+<span>
+
+1. scoreBanded : replaced int return with 0 for com/rescuenet/core/event/SensorEvent::scoreBanded &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        return 10;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_83'/>
+83
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_83'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e198c40_84'/>
+84
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_84'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_44'>44</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_44'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>deriveCategory<br/><b>Killed by : </b>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:incompatibleCategoriesDontMerge()]</span></span> replaced return value with null for com/rescuenet/core/event/SensorEvent::deriveCategory &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_46'>46</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_46'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>deriveCategory<br/><b>Killed by : </b>none</span></span> replaced return value with null for com/rescuenet/core/event/SensorEvent::deriveCategory &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_48'>48</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_48'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>deriveCategory<br/><b>Killed by : </b>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:incompatibleCategoriesDontMerge()]</span></span> replaced return value with null for com/rescuenet/core/event/SensorEvent::deriveCategory &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_50'>50</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_50'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>deriveCategory<br/><b>Killed by : </b>none</span></span> replaced return value with null for com/rescuenet/core/event/SensorEvent::deriveCategory &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_54'>54</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_54'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getSensorId<br/><b>Killed by : </b>none</span></span> replaced return value with &#34;&#34; for com/rescuenet/core/event/SensorEvent::getSensorId &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_55'>55</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_55'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getSensorType<br/><b>Killed by : </b>none</span></span> replaced return value with null for com/rescuenet/core/event/SensorEvent::getSensorType &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_56'>56</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_56'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getMeasuredValue<br/><b>Killed by : </b>none</span></span> replaced double return with 0.0d for com/rescuenet/core/event/SensorEvent::getMeasuredValue &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_57'>57</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_57'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getStatus<br/><b>Killed by : </b>none</span></span> replaced return value with null for com/rescuenet/core/event/SensorEvent::getStatus &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_58'>58</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_58'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getBatteryLevel<br/><b>Killed by : </b>none</span></span> replaced double return with 0.0d for com/rescuenet/core/event/SensorEvent::getBatteryLevel &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_61'>61</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_61'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCriticallyLowBattery<br/><b>Killed by : </b>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioG]/[method:boundaryBatteryIsReliable()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>hasCriticallyLowBattery<br/><b>Killed by : </b>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioG]/[method:boundaryBatteryIsReliable()]</span></span> replaced boolean return with true for com/rescuenet/core/event/SensorEvent::hasCriticallyLowBattery &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>hasCriticallyLowBattery<br/><b>Killed by : </b>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioG]/[method:lowBatterySensorIgnored()]</span></span> replaced boolean return with false for com/rescuenet/core/event/SensorEvent::hasCriticallyLowBattery &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>hasCriticallyLowBattery<br/><b>Killed by : </b>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioG]/[method:boundaryBatteryIsReliable()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_66'>66</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_66'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getRawScore<br/><b>Killed by : </b>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioB]/[method:highSmokeSensorIsAtLeastMedium()]</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_70'>70</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_70'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getRawScore<br/><b>Killed by : </b>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioB]/[method:highSmokeSensorIsAtLeastMedium()]</span></span> replaced int return with 0 for com/rescuenet/core/event/SensorEvent::getRawScore &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_71'>71</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_71'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getRawScore<br/><b>Killed by : </b>none</span></span> replaced int return with 0 for com/rescuenet/core/event/SensorEvent::getRawScore &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_72'>72</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_72'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getRawScore<br/><b>Killed by : </b>none</span></span> replaced int return with 0 for com/rescuenet/core/event/SensorEvent::getRawScore &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_73'>73</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_73'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getRawScore<br/><b>Killed by : </b>none</span></span> replaced int return with 0 for com/rescuenet/core/event/SensorEvent::getRawScore &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=getRawScore,-methodDesc=()I],-indexes=[54],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=getRawScore,-methodDesc=()I],-indexes=[54],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=getRawScore,-methodDesc=()I],-indexes=[54],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:incompatibleCategoriesDontMerge()]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_80'>80</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_80'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>scoreBanded<br/><b>Killed by : </b>none</span></span> replaced int return with 0 for com/rescuenet/core/event/SensorEvent::scoreBanded &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=scoreBanded,-methodDesc=(DDD)I],-indexes=[8],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=scoreBanded,-methodDesc=(DDD)I],-indexes=[8],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=scoreBanded,-methodDesc=(DDD)I],-indexes=[8],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioE]/[method:incidentNotQueuedTwice()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioD]/[method:highPriorityAssignsTeam()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioE]/[method:noTeamQueuesAndAutoAssigns()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>scoreBanded<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=scoreBanded,-methodDesc=(DDD)I],-indexes=[6],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=scoreBanded,-methodDesc=(DDD)I],-indexes=[6],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=scoreBanded,-methodDesc=(DDD)I],-indexes=[6],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:incompatibleCategoriesDontMerge()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioB]/[method:highSmokeSensorIsAtLeastMedium()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:distantEventsDontCorrelate()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:temporallyDistantEventsDontCorrelate()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioE]/[method:incidentNotQueuedTwice()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioD]/[method:highPriorityAssignsTeam()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:threeSourcesMerge()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioE]/[method:noTeamQueuesAndAutoAssigns()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>scoreBanded<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=scoreBanded,-methodDesc=(DDD)I],-indexes=[6],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=scoreBanded,-methodDesc=(DDD)I],-indexes=[6],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=scoreBanded,-methodDesc=(DDD)I],-indexes=[6],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:incompatibleCategoriesDontMerge()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioB]/[method:highSmokeSensorIsAtLeastMedium()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:distantEventsDontCorrelate()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:temporallyDistantEventsDontCorrelate()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioE]/[method:incidentNotQueuedTwice()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioD]/[method:highPriorityAssignsTeam()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:threeSourcesMerge()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioE]/[method:noTeamQueuesAndAutoAssigns()]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_81'>81</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_81'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>scoreBanded<br/><b>Killed by : </b>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioB]/[method:highSmokeSensorIsAtLeastMedium()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>scoreBanded<br/><b>Killed by : </b>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioB]/[method:highSmokeSensorIsAtLeastMedium()]</span></span> replaced int return with 0 for com/rescuenet/core/event/SensorEvent::scoreBanded &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>scoreBanded<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=scoreBanded,-methodDesc=(DDD)I],-indexes=[15],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=scoreBanded,-methodDesc=(DDD)I],-indexes=[15],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.rescuenet.core.event.SensorEvent,-method=scoreBanded,-methodDesc=(DDD)I],-indexes=[15],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:incompatibleCategoriesDontMerge()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioB]/[method:highSmokeSensorIsAtLeastMedium()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:distantEventsDontCorrelate()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:temporallyDistantEventsDontCorrelate()]</li> <li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:threeSourcesMerge()]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e198c40_82'>82</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e198c40_82'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>scoreBanded<br/><b>Killed by : </b>none</span></span> replaced int return with 0 for com/rescuenet/core/event/SensorEvent::scoreBanded &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+
+<li class='mutator'>EMPTY_RETURNS</li>
+
+<li class='mutator'>FALSE_RETURNS</li>
+
+<li class='mutator'>INCREMENTS</li>
+
+<li class='mutator'>INVERT_NEGS</li>
+
+<li class='mutator'>MATH</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+
+<li class='mutator'>NULL_RETURNS</li>
+
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+
+<li class='mutator'>TRUE_RETURNS</li>
+
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:incompatibleCategoriesDontMerge()] (1 ms)</li><li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioE]/[method:incidentNotQueuedTwice()] (0 ms)</li><li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioD]/[method:highPriorityAssignsTeam()] (1 ms)</li><li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioE]/[method:noTeamQueuesAndAutoAssigns()] (2 ms)</li><li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioG]/[method:boundaryBatteryIsReliable()] (0 ms)</li><li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioG]/[method:lowBatterySensorIgnored()] (1 ms)</li><li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioB]/[method:okStatusSensorIsLow()] (1 ms)</li><li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioB]/[method:highSmokeSensorIsAtLeastMedium()] (2 ms)</li><li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:distantEventsDontCorrelate()] (1 ms)</li><li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:temporallyDistantEventsDontCorrelate()] (1 ms)</li><li>com.rescuenet.RescueNetSystemTest.[engine:junit-jupiter]/[class:com.rescuenet.RescueNetSystemTest]/[nested-class:ScenarioC]/[method:threeSourcesMerge()] (2 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.19.4
+
+</body>
+</html>
