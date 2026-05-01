@@ -11,10 +11,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-<<<<<<< HEAD
-=======
-import java.util.Collections;
->>>>>>> 294e1df8e1bf0308a8eed781c47904f0eae08650
 import java.util.HashSet;
 import java.util.Set;
 
