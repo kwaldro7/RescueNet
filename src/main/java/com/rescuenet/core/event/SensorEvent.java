@@ -5,9 +5,12 @@ package com.rescuenet.core.event;
  * Supports: smoke (ppm), temperature (C), CO2 (ppm), motion.
  * Reliability degrades when battery is critically low.
  */
+<<<<<<< HEAD
 @SuppressWarnings("PMD.DataClass")
 // Domain event classes intentionally carry data — this is not an
 // anti-pattern in the context of an event-driven domain model.
+=======
+>>>>>>> 294e1df8e1bf0308a8eed781c47904f0eae08650
 public class SensorEvent extends RawEvent {
 
     public enum SensorType { SMOKE, TEMPERATURE, CO2, MOTION }

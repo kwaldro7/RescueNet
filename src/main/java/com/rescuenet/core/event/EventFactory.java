@@ -12,7 +12,11 @@ package com.rescuenet.core.event;
  * This means IncidentManager only needs to check event.isReliable()
  * and never needs to know about battery levels or confidence thresholds.
  */
+<<<<<<< HEAD
 public final class EventFactory {
+=======
+public class EventFactory {
+>>>>>>> 294e1df8e1bf0308a8eed781c47904f0eae08650
 
     private EventFactory() {
         // Utility class - not instantiable
