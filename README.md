@@ -309,5 +309,5 @@ mvn clean
 mvn clean package
 ```
 
-This compiles, runs all 26 tests, and builds the executable JAR.
+This compiles, runs all 20 tests, and builds the executable JAR.
 The JAR is written to `target/rescuenet-1.0.0.jar`.
