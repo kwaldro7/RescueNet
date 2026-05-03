@@ -400,6 +400,16 @@ class RescueNetSystemTest {
             assertThat(system.submitEvent(lowConf)).isNull();
             assertThat(system.getIncidents()).isEmpty();
         }
+
+        @Test
+        @DisplayName("Video confidence at exactly 0.4 is RELIABLE")
+        void boundaryConfidenceIsReliable() {
+            RescueNetSystem system = new RescueNetSystem();
+
+            RawEvent boundaryConf = EventFactory.videoEvent(BASE_LOC, 0, "fire", 0.4);
+
+            assertThat(boundaryConf.getReliability()).isEqualTo(EventReliability.RELIABLE);
+        }
     }
 
     // =========================================================================
