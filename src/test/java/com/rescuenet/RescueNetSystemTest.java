@@ -371,7 +371,7 @@ class RescueNetSystemTest {
             RawEvent badSensor = EventFactory.sensorEvent(
                     "DEAD-S1", BASE_LOC, 0,
                     SensorEvent.SensorType.SMOKE, 999.0,
-                    SensorEvent.SensorStatus.ALERT, 3.0);
+                    SensorEvent.SensorStatus.ALERT, 4.9);
 
             assertThat(badSensor.getReliability()).isEqualTo(EventReliability.UNRELIABLE);
             assertThat(system.submitEvent(badSensor)).isNull();
