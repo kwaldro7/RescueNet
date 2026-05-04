@@ -52,7 +52,7 @@ Expected output: `BUILD SUCCESS`
 
 ---
 
-## Run All Tests (20 JUnit 5 tests covering all 7 scenarios)
+## Run All Tests (21 JUnit 5 tests covering all 7 scenarios)
 
 ```bash
 mvn test
@@ -60,7 +60,7 @@ mvn test
 
 Expected output:
 ```
-Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0
 BUILD SUCCESS
 ```
 
@@ -309,5 +309,5 @@ mvn clean
 mvn clean package
 ```
 
-This compiles, runs all 20 tests, and builds the executable JAR.
+This compiles, runs all 21 tests, and builds the executable JAR.
 The JAR is written to `target/rescuenet-1.0.0.jar`.
